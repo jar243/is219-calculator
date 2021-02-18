@@ -20,6 +20,16 @@ test('Calculator can divide two numbers', () => {
   expect(result).toBe(.5);
 });
 
+test('Calculator can square a number', () => {
+  let result = Calculator.square(2);
+  expect(result).toBe(4);
+});
+
+test('Calculator can square root a number', () => {
+  let result = Calculator.squareRoot(100);
+  expect(result).toBe(10);
+});
+
 test('Calculator stores calculations', () => {
   let calculations = Calculator.calculations
   calculations.forEach(function (calc) { calc.getResult() });

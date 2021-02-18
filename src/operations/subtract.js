@@ -1,5 +1,5 @@
-function subtract(a, b) {
-  return a - b;
+function subtract(minuend, subtrahend) {
+  return minuend - subtrahend;
 }
 
 module.exports = subtract;

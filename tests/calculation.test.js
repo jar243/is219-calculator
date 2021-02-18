@@ -27,3 +27,13 @@ test('Calculation class divides correctly', () => {
   let calc = new Calculation('divide', 10, 5);
   expect(calc.getResult()).toBe(2);
 });
+
+test('Calculation class exponentiates correctly', () => {
+  let calc = new Calculation('exponentiate', 2, 3);
+  expect(calc.getResult()).toBe(8);
+});
+
+test('Calculation class roots correctly', () => {
+  let calc = new Calculation('root', 100, 2);
+  expect(calc.getResult()).toBe(10);
+});

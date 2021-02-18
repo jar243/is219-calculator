@@ -2,17 +2,23 @@ const Calculation = require('./models/calculation')
 
 class Calculator {
   static calculations = []
-  static sum(a, b) {
-    return this._calc('add', a, b);
+  static sum(term1, term2) {
+    return this._calc('add', term1, term2);
   }
-  static difference(a, b) {
-    return this._calc('subtract', a, b);
+  static difference(term1, term2) {
+    return this._calc('subtract', term1, term2);
   }
-  static product(a, b) {
-    return this._calc('multiply', a, b);
+  static product(factor1, factor2) {
+    return this._calc('multiply', factor1, factor2);
   }
-  static quotient(a, b) {
-    return this._calc('divide', a, b);
+  static quotient(dividend, divisor) {
+    return this._calc('divide', dividend, divisor);
+  }
+  static squareRoot(radicand) {
+    return this._calc('root', radicand, 2);
+  }
+  static square(base) {
+    return this._calc('exponentiate', base, 2);
   }
   static _calc(operation, a, b) {
     let calculation = new Calculation(operation, a, b);

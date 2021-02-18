@@ -1,15 +1,12 @@
-const add = require('../operations/add')
-const divide = require('../operations/divide')
-const multiply = require('../operations/multiply')
-const subtract = require('../operations/subtract')
-
 class Calculation {
   constructor(operation, a, b) {
     const opToFunc = {
-      'add': add,
-      'divide': divide,
-      'multiply': multiply,
-      'subtract': subtract
+      'add': require('../operations/add'),
+      'divide': require('../operations/divide'),
+      'exponentiate': require('../operations/exponentiate'),
+      'multiply': require('../operations/multiply'),
+      'root': require('../operations/root'),
+      'subtract': require('../operations/subtract')
     }
     if (typeof opToFunc[operation] === 'undefined') {
       throw ['unsupported operation:', operation].join(' ');
